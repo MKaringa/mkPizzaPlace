@@ -27,4 +27,17 @@ $(document).ready(function(){
         $("input[name='topping']:checked").each(function(){
         sumToppings+= parseInt($(this).val());
     })
+    var Total = ((price[size]) + crust + sumToppings)* amount;
+
+    if (size =='undefined'|| (price[size]) == 'undefined' || crust == 'NaN' || sumToppings == '' || Total == 'NaN'){         
+        $("#total").html('Kindly select at least one size, one crust and a topping')
+    } else{
+        $("#total").html("<strong>Your Pick:</strong>" + "<br/>"+"Type:" + type + "<br/>"+ " Size: " + getSize(size)+ "<br/>"+" No. of Pizzas ordered " + amount+ "<br/>"+ " Price: Kshs " + price[size] + "<br/>" + " crust: Kshs. " + crust + "<br/>"+ " Toppings: Kshs "+ sumToppings + "<br/>"+" <strong> Total: Kshs </strong>" + subTotal);
+        $(".deliver").show();
+    }
+    });
+
+    $("#checkout").click(function(){
+        swal("Thank you for shopping with us", "Kindly pick up your order at the counter near by.", "success");
+    });
 });
