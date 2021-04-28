@@ -41,3 +41,24 @@ $(document).ready(function(){
         swal("Thank you for shopping with us", "Kindly pick up your order at the counter near by.", "success");
     });
 });
+//form validation
+$('#delivery').click(function(){
+    $(".delivery").show
+});
+
+    $("#confirm").click(function(){
+        event.preventDefault()
+        let locations = ["Rongai", "Runda", "Gachie", "Muthaiga", "Thika Road"]
+        let charges = [150, 400, 100, 500, 200]
+        let name = $("#name").val();
+        let contact = $("#contact").value();
+        let location = locations[$("#location").val()];
+        let address = $("#street").val();
+        let delivery = charges[$("#location").val()];
+        
+        if (name == '' || contact == ''|| location == '' || address == ''){
+            swal("Error. Kindly confirm you have filled in all the information.");
+        } else{
+            swal('Hello ' + name + ' we have received you order.' )
+        }
+    });
