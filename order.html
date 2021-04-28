@@ -86,6 +86,41 @@
         <p>Do you want your pizza delivered? Check out on the delivery button below, but if you don't need one proceed to checkout</p>
         <button type="button" class="btn btn-success" id="delivery">Delivery</button>
         <button type="submit" class="btn btn-success" id="checkout">Checkout</button>
+    </div><br>
+
+    <div class="container">
+        <div class="col-md-6">
+            <form class="form-group">
+                <div class="form-group">
+                    <label for="name">Kindly fill in your name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contacts">Kindly fill in your Phone Number</label>
+                    <input type="number" class="form-control" id="contact" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Kindly select where you want your pizza delivered</label>
+                    <select class="form-control" id="location">
+                        <option value="0" class="form-control">Rongai</option>
+                        <option value="1" class="form-control">Runda</option>
+                        <option value="2" class="form-control">Gachie</option>
+                        <option value="3" class="form-control">Muthaiga</option>
+                        <option value="4" class="form-control">Thika Road</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="address">Kindly fill in your house address</label>
+                    <input type="text" class="form-control" id="street" required>
+                </div>
+                <button type="button" class="btn btn-success" id="confirm">Confirm</button>
+                <div>
+                    <p id="Summary"></p>
+                </div>
+            </form>
+        </div>
     </div>
+
 </body>
+<script src="./js/script.js"></script>
 </html>
